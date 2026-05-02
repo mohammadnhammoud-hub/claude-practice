@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Theme Toggle Practice</title>
+  <style>
+    [data-theme="light"] {
+      --bg: #ffffff;
+      --text: #111111;
+      --btn-bg: #111111;
+      --btn-text: #ffffff;
+    }
+
+    [data-theme="dark"] {
+      --bg: #111111;
+      --text: #ffffff;
+      --btn-bg: #ffffff;
+      --btn-text: #111111;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    button {
+      background-color: var(--btn-bg);
+      color: var(--btn-text);
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <h1>Hello, Claude Code!</h1>
+  <p>Welcome to my Claude Code practice project.</p>
+  <button onclick="toggleTheme()">Toggle Theme</button>
+
+  <script>
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    }
+  </script>
+</body>
+</html>
