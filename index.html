@@ -42,17 +42,56 @@
       cursor: pointer;
       margin-top: 20px;
     }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 12px 24px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    nav .nav-links {
+      display: flex;
+      gap: 8px;
+      flex: 1;
+    }
+
+    .avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #5c6bc0;
+      color: #fff;
+      font-size: 15px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      letter-spacing: 1px;
+      user-select: none;
+      flex-shrink: 0;
+    }
   </style>
 </head>
 <body>
   <header>
     <nav>
-      <a href="index.html">Home</a> |
-      <a href="about.html">About</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a> |
+        <a href="about.html">About</a>
+      </div>
+      <div class="avatar">MH</div>
     </nav>
   </header>
 
-  <h1>Hello, Claude Code!</h1>
+  <h1>I am learning Claude Code!</h1>
   <p>Welcome to my Claude Code practice project.</p>
   <button onclick="toggleTheme()">Toggle Theme</button>
 
