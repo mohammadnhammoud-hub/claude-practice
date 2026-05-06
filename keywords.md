@@ -375,6 +375,84 @@ Claude builds the component using those values
 
 ---
 
+---
+
+### MCP (Model Context Protocol) — Key Terms
+
+| Term | What it means |
+|---|---|
+| **`.mcp.json`** | File in your project folder that configures which MCP servers Claude Code loads |
+| **`mcpServers`** | The key inside `.mcp.json` where you list each server |
+| **`stdio`** | MCP server type that runs locally — Claude Code spawns it as a process using a command (e.g. `npx`) |
+| **`SSE / HTTP`** | MCP server type that connects to a remote server over the internet via a URL |
+| **`--scope project`** | CLI flag — saves MCP server config to `.mcp.json` in the project folder (same as writing it manually) |
+| **`--scope user`** | CLI flag — saves MCP config globally for your machine, all projects |
+| **`--scope local`** | CLI flag — saves locally for this project only, not committed to git |
+| **`npx`** | Runs an npm package without installing it — used to start local MCP servers |
+| **`context7`** | MCP server that fetches live, up-to-date documentation for any library |
+| **`resolve-library-id`** | context7 tool — finds the correct ID for a library (step 1) |
+| **`query-docs`** | context7 tool — fetches actual docs using the library ID (step 2) |
+| **Platform MCP vs local MCP** | Platform = pre-configured by claude.ai, always available. Local = defined in `.mcp.json`, runs on your machine |
+
+---
+
+### Tailwind v4 — Theme Variables
+
+| Term | What it means |
+|---|---|
+| **`@import "tailwindcss"`** | Tailwind v4 way to import the framework in your CSS file |
+| **`@theme inline`** | Tailwind v4 directive — registers CSS variables as theme tokens so Tailwind generates utility classes from them (e.g. `bg-primary`) |
+| **`:root`** | CSS block for defining global CSS custom properties (variables) — available everywhere |
+| **CSS custom properties** | Reusable variables in CSS written as `--variable-name`, used with `var(--variable-name)` |
+| **Theme tokens** | Variables registered in `@theme` that Tailwind turns into utility classes |
+
+---
+
+---
+
+### MCP Skills
+
+| Skill | What it means |
+|---|---|
+| **Creating `.mcp.json` manually** | Writing the MCP config file directly without using the terminal — use the file editor or ask Claude to write it |
+| **Adding a stdio MCP server** | Using `"command": "npx"` + `"args"` in `.mcp.json` to run a server locally |
+| **Adding a remote MCP server** | Using `"type": "sse"` + `"url"` in `.mcp.json` to connect to an internet-hosted server |
+| **Using context7 for docs** | Ask Claude to "use context7" before a question — it fetches live docs instead of relying on training data |
+| **Showing hidden files on Mac** | Press `Cmd + Shift + .` in Finder to reveal files starting with `.` like `.mcp.json` |
+
+---
+
+### Playwright MCP — Browser Automation
+
+| Term | What it means |
+|---|---|
+| **Playwright** | MCP server that lets Claude control a real browser — navigate, click, type, screenshot, fill forms |
+| **`browser_navigate`** | Playwright tool — opens a URL in the browser |
+| **`browser_snapshot`** | Playwright tool — reads all the content/elements on the page (better than screenshot for understanding the page) |
+| **`browser_take_screenshot`** | Playwright tool — takes a visual screenshot of the current page |
+| **`browser_click`** | Playwright tool — clicks an element on the page |
+| **`browser_fill_form`** | Playwright tool — fills in form fields |
+| **Legacy code** | Old code that still works but is hard to understand or change — common when joining existing projects |
+| **`WebFetch`** | Claude tool for fetching live data from the web (e.g. Yahoo Finance for stock prices) |
+
+---
+
+### Playwright Skills
+
+| Skill | What it means |
+|---|---|
+| **Adding Playwright to `.mcp.json`** | Using `"command": "npx"` + `"args": ["@playwright/mcp@latest"]` to add browser control to your project |
+| **Reloading VS Code** | `Cmd + Shift + P` → "Developer: Reload Window" — restarts Claude Code and re-reads `.mcp.json` |
+| **Using Playwright to summarize a site** | Tell Claude to navigate to a URL — it reads the page content and gives you a summary |
+
+---
+
+## Saved Instructions (not applied yet)
+
+- `# use context7 to check up-to-date docs when needed for implementing new libraries or framework, or adding features using them`
+
+---
+
 ## Notes
 
 - Ask Claude to **summarize keywords** anytime by just asking "summarize my keywords".
