@@ -453,8 +453,74 @@ Claude builds the component using those values
 
 ---
 
+## Practice Checklist
+
+### Done
+- [x] `@filename` — point Claude to a specific file
+- [x] `Esc Esc` — cancel Claude mid-task
+- [x] `/compact` — compress conversation history
+- [x] `/clear` — clear conversation and start fresh
+- [x] `/init` — analyze project and create CLAUDE.md
+- [x] `# memory rule` — give Claude a rule to remember
+- [x] `git commit` — save a snapshot of the project
+- [x] `think hard` — deeper reasoning mode
+- [x] Plan mode (`Shift + Tab`) — review before Claude acts
+- [x] `/keybindings-help` — customize keyboard shortcuts
+
+### To Practice — Claude Code Skills
+- [ ] `/security-review` — review branch changes for security issues
+- [ ] `/update-config` — configure settings, hooks, permissions
+- [ ] `/loop` — run a prompt on a recurring interval
+- [ ] `/schedule` — schedule recurring or one-time agents
+- [ ] `/review` — review a pull request
+- [ ] `/exit` — quit Claude Code session completely
+- [ ] `think` — basic reasoning mode
+- [ ] `think step by step` — walk through logic one step at a time
+- [ ] `think harder` — deeper than think hard
+- [ ] `ultrathink` — maximum reasoning depth
+- [ ] Subagents — ask Claude to use Explore, Plan, General-purpose agents
+- [ ] Plan Mode full workflow — EnterPlanMode, AskUserQuestion, ExitPlanMode
+- [ ] Custom slash commands — create `.md` in `.claude/commands/`
+- [ ] `$ARGUMENTS` — dynamic custom commands with arguments
+- [ ] Hidden files (`Cmd + Shift + .`) — reveal `.claude` folder in Finder
+- [ ] Hooks — set up automated actions with `/update-config`
+- [ ] Images — share screenshots with Claude (works best outside VSCode)
+
+### To Practice — Terminal Only
+- [ ] `claude --continue` — reopen most recent conversation
+- [ ] `claude --resume` — pick from past conversations
+
+### To Practice — Git & GitHub
+- [ ] Git branching — create a new branch, switch between branches
+- [ ] Push to GitHub and create a pull request
+
+### To Practice — MCP
+- [ ] context7 MCP — fetch live docs for any library
+- [ ] Playwright MCP — control a real browser
+- [ ] Creating `.mcp.json` manually
+- [ ] Adding stdio vs remote MCP servers
+
+### To Practice — my-app (needs `npm run dev`)
+- [ ] `npm run dev` — start the dev server and open in browser
+- [ ] Avatar component — build and view in `/preview`
+- [ ] Button component — build and view in `/preview`
+- [ ] Badge component — build and view in `/preview`
+- [ ] Card component — build and view in `/preview`
+- [ ] Tailwind v4 theme variables — CSS custom properties in `globals.css`
+- [ ] Testing with Jest — run `npm test` and read results
+
+### To Review (Concepts — no action needed, just understand)
+- [ ] Security concepts — XSS, soft delete, moderation, auto-hide
+- [ ] Firebase concepts — Firestore, onSnapshot, Auth, CDN SDK
+
+### Future Project
+- [ ] Stock project — build something real using what you learned
+
+---
+
 ## Notes
 
 - Ask Claude to **summarize keywords** anytime by just asking "summarize my keywords".
 - Use **"think hard"** before complex requests to get deeper, more thorough answers.
 - Use **`ultrathink`** for the most complex tasks — full system design, critical decisions.
+- Use **`/review`** to have Claude review a pull request and give feedback on your code.
